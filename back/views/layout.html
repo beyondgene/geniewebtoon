@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title || "Genie Webtoon Admin" }}</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>지니 웹툰 관리자</h1>
+      <nav>
+        <a href="/admin/users">회원</a> | <a href="/admin/webtoons">웹툰</a> |
+        <a href="/admin/comments">댓글</a> |
+        <a href="/admin/ads">광고</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Genie Webtoon</p>
+    </footer>
+  </body>
+</html>

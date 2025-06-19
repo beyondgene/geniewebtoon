@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block content %}
+<h2>댓글 관리</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>작성자</th>
+    <th>내용</th>
+    <th>좋아요</th>
+    <th>신고</th>
+  </tr>
+  {% for cmt in comments %}
+  <tr>
+    <td>{{ cmt.id }}</td>
+    <td>{{ cmt.user?.nickname }}</td>
+    <td>{{ cmt.content }}</td>
+    <td>{{ cmt.likes }}</td>
+    <td>{{ cmt.reports }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

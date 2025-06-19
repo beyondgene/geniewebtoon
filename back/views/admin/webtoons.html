@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block content %}
+<h2>웹툰 관리</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>제목</th>
+    <th>작가</th>
+    <th>장르</th>
+    <th>요일</th>
+  </tr>
+  {% for wt in webtoons %}
+  <tr>
+    <td>{{ wt.id }}</td>
+    <td>{{ wt.webtoonName }}</td>
+    <td>{{ wt.artistName }}</td>
+    <td>{{ wt.genre }}</td>
+    <td>{{ wt.weekday }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

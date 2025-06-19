@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block content %}
+<h2>관리자 대시보드</h2>
+<ul>
+  <li>총 회원 수: {{ stats.userCount }}</li>
+  <li>총 웹툰 수: {{ stats.webtoonCount }}</li>
+  <li>총 댓글 수: {{ stats.commentCount }}</li>
+  <li>광고 수: {{ stats.adCount }}</li>
+</ul>
+{% endblock %}

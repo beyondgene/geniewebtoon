@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block content %}
+<h2>광고 관리</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>위치</th>
+    <th>노출 빈도</th>
+    <th>시간대</th>
+    <th>연령층</th>
+  </tr>
+  {% for ad in ads %}
+  <tr>
+    <td>{{ ad.id }}</td>
+    <td>{{ ad.adLocation }}</td>
+    <td>{{ ad.exposureFrequency }}</td>
+    <td>{{ ad.peakViewingTimes }}</td>
+    <td>{{ ad.primaryAgeGroup }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
